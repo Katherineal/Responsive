@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú y Footer Responsive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <a href="#" class="logo">KA</a>
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="hamburger-menu" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <ul class="menu-items">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Sobre Mí</a></li>
+                        <li><a href="#">Portafolio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="py-10 text-center">
+        <h1 class="text-3xl font-bold">Bienvenido</h1>
+        <p class="mt-4 text-lg">Este es un ejemplo de un menú responsive y un footer con Tailwind CSS.</p>
+        </main>
+
+        <footer class="bg-gray-800 text-white py-4">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <ul class="flex space-x-4">
+                        <li><a href="#" class="hover:underline">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:underline">Términos y Condiciones</a></li>
+                        <li><a href="#" class="hover:underline">Contacto</a></li>
+                    </ul>
+                    <p class="mb-2 md:mb-0 text-center">&copy; 2024 Tu Sitio Web. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

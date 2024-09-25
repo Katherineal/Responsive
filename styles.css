@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu */
+
+main{
+    min-height: 85vh;
+    margin-top: 4rem;
+}
+/*Menu*/
+.navbar {
+    width: 100%;
+    background: #1F2937;
+    color: #ecf0f1;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+}
+
+.menu-items li {
+    margin-left: 1.5rem;
+}
+
+.menu-items a {
+    text-decoration: none !important;
+    color: #ecf0f1;
+    font-size: 1rem;
+    font-weight:400 ;
+    font-style: normal;
+    transition: color 0.3s ease;
+
+}
+
+.menu-items a:hover, .menu-items a:focus {
+    border-bottom:2px solid #0244C3;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family:"Roboto", system-ui;
+    color: #ffffff;
+    padding: 0 20px;      
+    text-decoration: none;
+}
+
+.logo a{
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.logo a:hover, .logo a:focus {
+    text-decoration: none; 
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-container{
+        position:static
+    }
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #1E1E1E;
+        padding: 1rem;
+    }
+
+    .menu-items li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #ecf0f1;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle:checked ~ .menu-items {
+        display: flex;
+    }
+
+    .menu-toggle:checked ~ .hamburger-menu span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle:checked ~ .hamburger-menu span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .hamburger-menu span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
